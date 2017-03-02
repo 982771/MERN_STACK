@@ -8,11 +8,14 @@ export default function adminReducer(state =[], action){
 
     }
 
-    case 'CREATE_ADMIN':{
-        const newState = Object.assign([], state.reverse());
-        newState.push(action.admin);
-        return newState.reverse();
-    }
+    // case 'CREATE_ADMIN':{
+    //     const newState = Object.assign([], state.reverse());
+    //     console.log(newState);
+    //     newState.push(action.admin);
+    //     return newState.reverse();
+    // }
+
+    case 'CREATE_ADMIN': return[...state, Object.assign({}, action.admin)]; 
 
     case 'DELETE_ADMIN': {
       const newState = Object.assign([], state);
