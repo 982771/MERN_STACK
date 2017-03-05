@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as adminActions from '../../actions/adminActions';
+import $ from 'jquery';
 //import env from '../../environment';
 //import init from '../../../tools/init';
 //import ComingSoonImg from '../../images/wip.png';
@@ -40,9 +41,11 @@ class AdminPage extends Component{
       name: 'sudhir',
       fmno: '57337'
     },];
-    //$.get(env[init.env()].admins, function(data){
+    
+    $.get('api/posts', function(data){
+      console.log(data);
       propObject.getAdmin(mockAdmins);
-    //});
+    });
   }
 
   onNameChange(event){

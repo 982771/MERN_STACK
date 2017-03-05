@@ -1,3 +1,4 @@
+//https://github.com/StevenIseki/react-router-redux-example
 import express from 'express';
 import webpack from 'webpack';
 import path from 'path';
@@ -8,8 +9,10 @@ import serverConfig from './config';
 import posts from '../appServer/routes/routes';
 import { match} from 'react-router';
 import bodyParser from 'body-parser';
+import dummyData from './dummData'
 
 /* eslint-disable no-console */
+import routes from '../src/routes';
 
 const app = express();
 const compiler = webpack(config);
@@ -21,9 +24,9 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../src/index.html'));
-});
+// app.get('*', function(req, res) {
+//   res.sendFile(path.join( __dirname, '../src/index.html'));
+// });
 
 // MongoDB Connection
 mongoose.connect(serverConfig.mongoURL, (error) => {
@@ -31,7 +34,7 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
     console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
     throw error;
   }
-
+    dummyData();
    console.log("Connected to MongoDB");
 });
 //app.use(compression());
@@ -41,8 +44,6 @@ app.use('/api', posts);
 // Server Side Rendering based on routes matched by React-router.
 app.use((req, res, next) => {
   match({ routes, location: req.url }, (err, redirectLocation, renderProps) => {
-    console.log(redirectLocation);
-    console.log(renderProps);
     if (err) {
       return res.status(500).end(renderError(err));
     }
@@ -50,17 +51,10 @@ app.use((req, res, next) => {
     if (redirectLocation) {
       return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     }
-
-    if (!renderProps) {
-      return next();
-    }
-
+    res.sendFile(path.join( __dirname, '../src/index.html'));
+   
   });
 });
-app.get('/posts', function(req,res){
-
-		res.json("ashdasjkdhas");
-	})
 
 
 
