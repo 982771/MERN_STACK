@@ -120,7 +120,7 @@ class AdminPage extends Component{
     return (
       <div>
         <div className="row">
-          <div className="col-md-5"><h2>ADMINS</h2></div>
+          <div className="col-md-5 head"><h2>ADMINS</h2></div>
           <div className="col-md-7"><input type="text" className="form-control" value={this.state.searchString} onChange={this.handleChange} placeholder="Search" /></div>
         </div>
         <div className="table-responsive">
