@@ -28,23 +28,9 @@ class AdminPage extends Component{
   }
   componentDidMount() {
     const propObject = this.props;
-    const mockAdmins = [{
-      name: 'mathew',
-      fmno: '149592'
-    },{
-      name: 'minal',
-      fmno: '149548'
-    },{
-      name: 'rinu',
-      fmno: '149630'
-    },{
-      name: 'sudhir',
-      fmno: '57337'
-    },];
-    
-    $.get('api/posts', function(data){
-      console.log(data);
-      propObject.getAdmin(mockAdmins);
+
+    $.get('api/admins', function(data){
+      propObject.getAdmin(data);
     });
   }
 
@@ -64,33 +50,33 @@ class AdminPage extends Component{
     const propObject = this.props;
     const clearName = this.refs.clearName;
     const clearFmno = this.refs.clearFmno;
-    propObject.createAdmin(this.state.admins);
+
     clearName.value = "";
     clearFmno.value = "";
-    // $.ajax({
-    //   type: "POST",
-    //   url: env[init.env()].admins,
-    //   data: this.state.admins,
-    //   success: function(data){
-    //
-    //     clearName.value = "";
-    //     clearFmno.value = "";
-    //   },
-    //   error: function(data){
-    //     alert('error');
-    //   }
-    // });
+    $.ajax({
+      type: "POST",
+      url: 'api/admins',
+      data: this.state.admins,
+      success: function(data){
+        propObject.createAdmin(data);
+        clearName.value = "";
+        clearFmno.value = "";
+      },
+      error: function(data){
+        alert('error');
+      }
+    });
   }
 
   onDeleteAdmin(adminObject){
 
-  //   $.ajax({
-  //   url: env[init.env()].admins,
-  //   type: "DELETE",
-  //   data: adminObject,
-  //   success: function(data){
-  //   }
-  // });
+    $.ajax({
+    url: 'api/admins/'+adminObject._id,
+    type: "DELETE",
+    success: function(data){
+      console.log(data);
+    }
+  });
     this.props.deleteAdmin(adminObject);
   }
 

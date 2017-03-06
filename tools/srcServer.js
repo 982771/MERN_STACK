@@ -6,7 +6,7 @@ import config from '../webpack.config.dev';
 import open from 'open';
 import mongoose from 'mongoose';
 import serverConfig from './config';
-import posts from '../appServer/routes/routes';
+import adminRoutes from '../appServer/routes/adminroutes';
 import { match} from 'react-router';
 import bodyParser from 'body-parser';
 import dummyData from './dummData'
@@ -40,7 +40,7 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
 //app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-app.use('/api', posts);
+app.use('/api', adminRoutes);
 // Server Side Rendering based on routes matched by React-router.
 app.use((req, res, next) => {
   match({ routes, location: req.url }, (err, redirectLocation, renderProps) => {
@@ -52,7 +52,7 @@ app.use((req, res, next) => {
       return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     }
     res.sendFile(path.join( __dirname, '../src/index.html'));
-   
+
   });
 });
 
