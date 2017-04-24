@@ -1,0 +1,57 @@
+.GSD{
+  text-align: center;
+  color: green;
+}
+
+.gladSadMadContainer{
+    //background-image: url('../images/gsd/images/blueWall.jpg');
+    height: 780px;
+    width: 100%;
+
+    .popSolarCellEffect {
+		    animation: popSolarCell 1.5s linear 1.5s;
+	   }
+
+  .GSDBody{
+    height: 100%;
+    .projectName{
+      h1{
+        text-align: center;
+      }
+    }
+    .glad{
+        color: green;
+        display: inline;
+    }
+
+    .sad{
+        display: inline;
+        color: red;
+    }
+
+    .mad{
+        display: inline;
+        color: blue;
+    }
+
+    .gladList{
+      border: 2px solid green;
+      padding: 5px;
+      height: 250px;
+    }
+
+    .sadList{
+      border: 2px solid red;
+      padding: 5px;
+      height: 250px;
+    }
+
+    .madList{
+      border: 2px solid blue;
+      padding: 5px;
+      height: 250px;
+    }
+
+
+  }
+}

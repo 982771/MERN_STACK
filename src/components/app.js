@@ -14,7 +14,7 @@ class App extends Component{
             <h1>Welcome to Mern Stack</h1>
         </header>
         <Menu/>
-        <div className = "col-md-12 col-xs-12 col-xl-12 mainContainer">
+        <div className="col-md-12 col-xs-12 col-xl-12 mainContainer">
             {this.props.children}
         </div>
 

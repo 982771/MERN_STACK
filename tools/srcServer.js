@@ -6,10 +6,15 @@ import config from '../webpack.config.dev';
 import open from 'open';
 import mongoose from 'mongoose';
 import serverConfig from './config';
-import adminRoutes from '../appServer/routes/adminroutes';
 import { match} from 'react-router';
 import bodyParser from 'body-parser';
-import dummyData from './dummData'
+import dummyData from './dummData';
+import adminRoutes from '../appServer/routes/adminroutes';
+import retroRoutes from '../appServer/routes/retro.routes';
+import gsdRoutes from '../appServer/routes/gsd.routes';
+import sailBoatRoutes from '../appServer/routes/sailboat.routes';
+
+
 
 /* eslint-disable no-console */
 import routes from '../src/routes';
@@ -40,7 +45,7 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
 //app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-app.use('/api', adminRoutes);
+app.use('/api', adminRoutes, retroRoutes, gsdRoutes, sailBoatRoutes);
 // Server Side Rendering based on routes matched by React-router.
 app.use((req, res, next) => {
   match({ routes, location: req.url }, (err, redirectLocation, renderProps) => {

@@ -26,15 +26,17 @@ class ComponentName extends Component{
   render(){
     return(
           <div>
-            <ul className="nav nav-pills">
-              <li className={(this.state.active === 'home') ? "active" : ""} onClick={()=>{this.toggle('home')}}><IndexLink to="/">Home</IndexLink></li>
-              <li className={(this.state.active === 'admin') ? "active" : ""} onClick={()=>{this.toggle('admin')}}><Link to="/admin">Admins</Link></li>
-              <li><Link to="">Menu 2</Link></li>
-              <li><Link to="">Menu 3</Link></li>
-            </ul>
+
           </div>
           );
   }
 }
 
 export default ComponentName;
+
+// <ul className="nav nav-pills">
+//   <li className={(this.state.active === 'home') ? "active" : ""} onClick={()=>{this.toggle('home')}}><IndexLink to="/">Home</IndexLink></li>
+//   <li className={(this.state.active === 'admin') ? "active" : ""} onClick={()=>{this.toggle('admin')}}><Link to="/admin">Admins</Link></li>
+//   <li className={(this.state.active === 'gsd') ? "active" : ""}><Link to="/gsd/gameid:7287892">Menu 2</Link></li>
+//   <li><Link to="">Menu 3</Link></li>
+// </ul>

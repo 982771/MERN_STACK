@@ -28,7 +28,6 @@ class AdminPage extends Component{
   }
   componentDidMount() {
     const propObject = this.props;
-
     $.get('api/admins', function(data){
       propObject.getAdmin(data);
     });

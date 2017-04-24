@@ -12,19 +12,22 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "body-parser": "^1.15.1",
     "babel-polyfill": "6.13.0",
+    "body-parser": "^1.15.1",
     "bootstrap": "3.3.7",
+    "image-webpack-loader": "^3.3.0",
     "jquery": "3.1.0",
+    "mongoose": "^4.4.20",
     "react": "15.3.0",
+    "react-bootstrap": "^0.30.8",
     "react-dom": "15.3.0",
     "react-redux": "4.4.5",
     "react-router": "2.6.1",
     "react-router-redux": "4.0.5",
+    "react-stickies": "0.0.16",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0",
-    "toastr": "2.1.2",
-    "mongoose": "^4.4.20"
+    "toastr": "2.1.2"
   },
   "devDependencies": {
     "babel-cli": "6.11.4",
