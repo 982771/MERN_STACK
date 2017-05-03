@@ -15,16 +15,6 @@
 .gladSadMadContainer {
   height: 780px;
   width: 100%; }
-@keyframes popSolarCell {
-  from {
-    transform: rotateX(15deg) scaleX(1);
-    opacity: 0.5; }
-  to {
-    transform: rotateX(20deg) rotateZ(183deg) rotateY(5deg) translateX(-375px) translateY(220px) scale(5);
-    height: 100px;
-    opacity: 1; } }
-  .gladSadMadContainer .popSolarCellEffect {
-    animation: popSolarCell 1.5s linear 1.5s; }
   .gladSadMadContainer .GSDBody {
     height: 100%; }
     .gladSadMadContainer .GSDBody .projectName h1 {
@@ -34,22 +24,173 @@
       display: inline; }
     .gladSadMadContainer .GSDBody .sad {
       display: inline;
-      color: red; }
+      color: #b51313; }
     .gladSadMadContainer .GSDBody .mad {
       display: inline;
-      color: blue; }
+      color: #0909c5; }
     .gladSadMadContainer .GSDBody .gladList {
-      border: 2px solid green;
+      border: 6px solid green;
       padding: 5px;
-      height: 250px; }
+      height: 250px;
+      overflow-y: scroll; }
+      .gladSadMadContainer .GSDBody .gladList .list-group {
+        list-style: none;
+        overflow: hidden;
+        padding: 1em; }
+        .gladSadMadContainer .GSDBody .gladList .list-group .gladListItem {
+          margin: 1em;
+          float: left; }
+      .gladSadMadContainer .GSDBody .gladList .gladListItem {
+        border: 0;
+        height: 5em;
+        width: 5em; }
+      .gladSadMadContainer .GSDBody .gladList .gladListItem, .gladSadMadContainer .GSDBody .gladList .list-group {
+        list-style: none; }
+      .gladSadMadContainer .GSDBody .gladList .gladLink {
+        overflow: hidden;
+        text-decoration: none;
+        color: #000;
+        background: #d8f7d8;
+        display: block;
+        height: 5em;
+        width: 5em;
+        padding: 1em;
+        -moz-box-shadow: 5px 5px 7px #212121;
+        -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg); }
+        .gladSadMadContainer .GSDBody .gladList .gladLink .gladText {
+          font-size: 100%;
+          font-weight: normal;
+          font-family: "Reenie Beanie",arial,sans-serif; }
+      .gladSadMadContainer .GSDBody .gladList .gladLink:hover, .gladSadMadContainer .GSDBody .gladList .gladLink:focus {
+        -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position: relative;
+        z-index: 5; }
     .gladSadMadContainer .GSDBody .sadList {
-      border: 2px solid red;
+      border: 6px solid #b51313;
       padding: 5px;
-      height: 250px; }
+      height: 250px;
+      overflow-y: scroll; }
+      .gladSadMadContainer .GSDBody .sadList .list-group {
+        list-style: none;
+        overflow: hidden;
+        padding: 1em; }
+        .gladSadMadContainer .GSDBody .sadList .list-group .sadListItem {
+          margin: 1em;
+          float: left; }
+      .gladSadMadContainer .GSDBody .sadList .sadListItem {
+        border: 0;
+        height: 5em;
+        width: 5em; }
+      .gladSadMadContainer .GSDBody .sadList .sadListItem, .gladSadMadContainer .GSDBody .sadList .list-group {
+        list-style: none; }
+      .gladSadMadContainer .GSDBody .sadList .sadLink {
+        overflow: hidden;
+        text-decoration: none;
+        color: #000;
+        background: #f3dce8;
+        display: block;
+        height: 5em;
+        width: 5em;
+        padding: 1em;
+        -moz-box-shadow: 5px 5px 7px #212121;
+        -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg); }
+        .gladSadMadContainer .GSDBody .sadList .sadLink .sadText {
+          font-size: 100%;
+          font-weight: normal;
+          font-family: "Reenie Beanie",arial,sans-serif; }
+      .gladSadMadContainer .GSDBody .sadList .sadLink:hover, .gladSadMadContainer .GSDBody .sadList .sadLink:focus {
+        -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position: relative;
+        z-index: 5; }
     .gladSadMadContainer .GSDBody .madList {
-      border: 2px solid blue;
+      border: 6px solid #0909c5;
       padding: 5px;
-      height: 250px; }
+      height: 250px;
+      overflow-y: scroll; }
+      .gladSadMadContainer .GSDBody .madList .list-group {
+        list-style: none;
+        overflow: hidden;
+        padding: 1em; }
+        .gladSadMadContainer .GSDBody .madList .list-group .madListItem {
+          margin: 1em;
+          float: left; }
+      .gladSadMadContainer .GSDBody .madList .madListItem {
+        border: 0;
+        height: 5em;
+        width: 5em; }
+      .gladSadMadContainer .GSDBody .madList .madListItem, .gladSadMadContainer .GSDBody .madList .list-group {
+        list-style: none; }
+      .gladSadMadContainer .GSDBody .madList .madLink {
+        overflow: hidden;
+        text-decoration: none;
+        color: #000;
+        background: #cfd1f1;
+        display: block;
+        height: 5em;
+        width: 5em;
+        padding: 1em;
+        -moz-box-shadow: 5px 5px 7px #212121;
+        -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg); }
+        .gladSadMadContainer .GSDBody .madList .madLink .madText {
+          font-size: 100%;
+          font-weight: normal;
+          font-family: "Reenie Beanie",arial,sans-serif; }
+      .gladSadMadContainer .GSDBody .madList .madLink:hover, .gladSadMadContainer .GSDBody .madList .madLink:focus {
+        -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position: relative;
+        z-index: 5; }
+    .gladSadMadContainer .GSDBody .jerryImage {
+      height: 120px;
+      width: 120px;
+      margin-top: 170px;
+      margin-left: -10px; }
+    .gladSadMadContainer .GSDBody .tomImage {
+      height: 250px;
+      width: 175px;
+      margin-top: 50px;
+      margin-left: -20px;
+      display: inline; }
+    .gladSadMadContainer .GSDBody .brunoImage {
+      height: 180px;
+      width: 350px;
+      margin-top: 100px;
+      margin-left: 50px; }
 
 html {
   width: 100%;
@@ -57,6 +198,6 @@ html {
   background: white; }
 
 header {
-  background-color: red; }
+  background-color: #ABC2FA; }
 
 /*# sourceMappingURL=main.css.map */

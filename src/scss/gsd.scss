@@ -8,11 +8,12 @@
     height: 780px;
     width: 100%;
 
-    .popSolarCellEffect {
-		    animation: popSolarCell 1.5s linear 1.5s;
-	   }
-
   .GSDBody{
+//    background: #ffffb3; /* For browsers that do not support gradients */
+//    background: -webkit-radial-gradient(#ffffb3, #ffffcc, #ffffe6); /* For Safari 5.1 to 6.0 */
+//    background: -o-radial-gradient(#ffffb3, #ffffcc, #ffffe6); /* For Opera 11.1 to 12.0 */
+//    background: -moz-radial-gradient(#ffffb3, #ffffcc, #ffffe6); /* For Firefox 3.6 to 15 */
+//    background: radial-gradient(#ffffb3, #ffffcc, #ffffe6); /* Standard syntax */
     height: 100%;
     .projectName{
       h1{
@@ -26,30 +27,208 @@
 
     .sad{
         display: inline;
-        color: red;
+        color: #b51313;
     }
 
     .mad{
         display: inline;
-        color: blue;
+        color: #0909c5;
     }
 
     .gladList{
-      border: 2px solid green;
+      border: 6px solid green;
       padding: 5px;
       height: 250px;
+      overflow-y: scroll;
+      .list-group{
+        list-style:none;
+        overflow:hidden;
+        padding:1em;
+        .gladListItem{
+          margin: 1em;
+          float: left;
+        }
+      }
+      .gladListItem{
+        border:0;
+        height: 5em;
+        width: 5em;
+      }
+      .gladListItem, .list-group{
+        list-style: none;
+      }
+      .gladLink{
+        overflow: hidden;
+        text-decoration:none;
+        color:#000;
+        background:#d8f7d8;
+        display:block;
+        height:5em;
+        width:5em;
+        padding:1em;
+        -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+        -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -moz-transition:-moz-transform .15s linear;
+        -o-transition:-o-transform .15s linear;
+        -webkit-transition:-webkit-transform .15s linear;
+        -webkit-transform:rotate(-6deg);
+        -o-transform:rotate(-6deg);
+        -moz-transform:rotate(-6deg);
+        .gladText{
+          font-size:100%;
+          font-weight:normal;
+          font-family:"Reenie Beanie",arial,sans-serif;
+        }
+      }
+      .gladLink:hover, .gladLink:focus{
+        -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+        box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position:relative;
+        z-index:5;
+      }
+
     }
 
     .sadList{
-      border: 2px solid red;
+      border: 6px solid #b51313;
       padding: 5px;
       height: 250px;
+      overflow-y: scroll;
+      .list-group{
+        list-style:none;
+        overflow:hidden;
+        padding:1em;
+        .sadListItem{
+          margin: 1em;
+          float: left;
+        }
+      }
+      .sadListItem{
+        border:0;
+        height: 5em;
+        width: 5em;
+      }
+      .sadListItem, .list-group{
+        list-style: none;
+      }
+      .sadLink{
+        overflow: hidden;
+        text-decoration:none;
+        color:#000;
+        background:#f3dce8;
+        display:block;
+        height:5em;
+        width:5em;
+        padding:1em;
+        -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+        -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -moz-transition:-moz-transform .15s linear;
+        -o-transition:-o-transform .15s linear;
+        -webkit-transition:-webkit-transform .15s linear;
+        -webkit-transform:rotate(-6deg);
+        -o-transform:rotate(-6deg);
+        -moz-transform:rotate(-6deg);
+        .sadText{
+          font-size:100%;
+          font-weight:normal;
+          font-family:"Reenie Beanie",arial,sans-serif;
+        }
+      }
+      .sadLink:hover, .sadLink:focus{
+        -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+        box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position:relative;
+        z-index:5;
+      }
     }
 
     .madList{
-      border: 2px solid blue;
+      border: 6px solid #0909c5;
       padding: 5px;
       height: 250px;
+      overflow-y: scroll;
+      .list-group{
+        list-style:none;
+        overflow:hidden;
+        padding:1em;
+        .madListItem{
+          margin: 1em;
+          float: left;
+        }
+      }
+      .madListItem{
+        border:0;
+        height: 5em;
+        width: 5em;
+      }
+      .madListItem, .list-group{
+        list-style: none;
+      }
+      .madLink{
+        overflow: hidden;
+        text-decoration:none;
+        color:#000;
+        background:#cfd1f1;
+        display:block;
+        height:5em;
+        width:5em;
+        padding:1em;
+        -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+        -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -moz-transition:-moz-transform .15s linear;
+        -o-transition:-o-transform .15s linear;
+        -webkit-transition:-webkit-transform .15s linear;
+        -webkit-transform:rotate(-6deg);
+        -o-transform:rotate(-6deg);
+        -moz-transform:rotate(-6deg);
+        .madText{
+          font-size:100%;
+          font-weight:normal;
+          font-family:"Reenie Beanie",arial,sans-serif;
+        }
+      }
+      .madLink:hover, .madLink:focus{
+        -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+        box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position:relative;
+        z-index:5;
+      }
+    }
+
+    .jerryImage{
+      height: 120px;
+      width: 120px;
+      margin-top: 170px;
+      margin-left: -10px;
+    }
+    .tomImage {
+    	height: 250px;
+    	width: 175px;
+      margin-top: 50px;
+    	margin-left: -20px;
+      display: inline;
+    }
+
+    .brunoImage {
+    	height: 180px;
+    	width: 350px;
+    	margin-top: 100px;
+      margin-left: 50px;
     }
 
 

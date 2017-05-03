@@ -8,7 +8,15 @@ export default function gsdReducer(state =[], action){
     }
     case 'CREATE_GLAD':{
       const newState = Object.assign([], state, action.gsd);
-      return newState
+      return newState;
+    }
+    case 'CREATE_SAD':{
+      const newState = Object.assign([], state, action.gsd);
+      return newState;
+    }
+    case 'CREATE_MAD':{
+      const newState = Object.assign([], state, action.gsd);
+      return newState;
     }
 
     default: return state;

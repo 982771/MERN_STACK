@@ -11,7 +11,7 @@ class App extends Component{
     return(
       <div>
         <header className="container-fluid col-md-12">
-            <h1>Welcome to Mern Stack</h1>
+            <h1>Welcome to Retro Tool</h1>
         </header>
         <Menu/>
         <div className="col-md-12 col-xs-12 col-xl-12 mainContainer">

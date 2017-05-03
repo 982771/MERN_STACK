@@ -54,3 +54,17 @@ export function createGladStory(req, res){
     res.json(gsd);
   })
 }
+
+export function createSadStory(req, res){
+  const sad = req.body;
+  GSD.findOneAndUpdate({parent_id: req.params.id},{$push: {sad: req.body}}, {safe: true, upsert: true, new : true},).exec(function(err,gsd){
+    res.json(gsd);
+  })
+}
+
+export function createMadStory(req, res){
+  const mad = req.body;
+  GSD.findOneAndUpdate({parent_id: req.params.id},{$push: {mad: req.body}}, {safe: true, upsert: true, new : true},).exec(function(err,gsd){
+    res.json(gsd);
+  })
+}
